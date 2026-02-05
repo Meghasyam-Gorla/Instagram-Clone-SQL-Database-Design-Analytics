@@ -77,7 +77,6 @@ Basic heuristics were applied to flag potential fake or low-quality accounts, su
 
 ## 📁 Repository Structure
 
-```text
 instagram-clone-sql-analysis/
 │
 ├── schema.sql          # Table creation scripts
