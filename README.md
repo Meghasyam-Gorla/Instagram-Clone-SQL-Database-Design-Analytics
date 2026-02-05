@@ -133,7 +133,7 @@ https://www.linkedin.com/in/meghasyam-gorla-8173a0248/
 ---
 
 ## 🙌 Author
-Gorla Meghasyam
-Aspiring Data Scientist | Python | Sql | Power-BI
+- Gorla Meghasyam
+- Aspiring Data Scientist | Python | Sql | Power-BI
 
 
