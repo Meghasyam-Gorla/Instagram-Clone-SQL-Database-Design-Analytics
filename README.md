@@ -77,6 +77,8 @@ Basic heuristics were applied to flag potential fake or low-quality accounts, su
 
 ## 📁 Repository Structure
 
+## 📁 Repository Structure
+
 ```text
 instagram-clone-sql-analysis/
 │
@@ -90,7 +92,7 @@ instagram-clone-sql-analysis/
 ├── post_hashtags.csv
 ├── queries.sql         # Analytical SQL queries
 └── README.md           # Project documentation
-
+ ```
 
 
 ---
@@ -131,7 +133,7 @@ https://www.linkedin.com/in/meghasyam-gorla-8173a0248/
 ---
 
 ## 🙌 Author
-Gorla Meghasyam
-Aspiring Data Scientist | Python | Sql | Power-BI
+- Gorla Meghasyam
+- Aspiring Data Scientist | Python | Sql | Power-BI
 
 
