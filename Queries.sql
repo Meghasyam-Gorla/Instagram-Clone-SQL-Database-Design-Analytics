@@ -143,6 +143,47 @@ from followers
 group by follower_id
 order by count1 desc;
 
+-- Which users have zero posts, zero followers, and zero likes received?
+select u.userid, count(p.postid) as count1,
+count(l.likeid) as count2,count(c.commentid) as count3
+from users u
+left join posts p
+on u.userid = p.userid
+left join likes l
+on l.postid = p.postid
+left join comments c
+on c.postid = p.postid
+group by u.userid
+having count1 = 0 and count2 = 0 and count3 = 0;
+
+-- What is the monthly growth of users, posts, and likes?
+with months as (select year(u.created_at) as yr, monthname(u.created_at) as mo
+from users u
+union
+select year(p.created_at), monthname(p.created_at) 
+from posts p
+union
+select year(l.created_at),monthname(l.created_at)
+from likes l),
+a as (select year(created_at) as yr,monthname(created_at) as mo, count(*) as new_users
+from users
+group by year(created_at),monthname(created_at)),
+b as (select year(created_at) as yr,monthname(created_at) as mo, count(*) as total_posts
+from posts
+group by year(created_at),monthname(created_at)),
+c as (select year(created_at) as yr,monthname(created_at) as mo, count(*) as total_likes
+from likes
+group by year(created_at),monthname(created_at))
+
+SELECT m.yr AS year,m.mo AS month,
+COALESCE(a.new_users, 0) AS new_users,
+COALESCE(b.total_posts, 0) AS total_posts,
+COALESCE(c.total_likes, 0) AS total_likes
+FROM months m
+LEFT JOIN a ON m.yr = a.yr AND m.mo = a.mo
+LEFT JOIN b ON m.yr = b.yr AND m.mo = b.mo
+LEFT JOIN c ON m.yr = c.yr AND m.mo = c.mo
+ORDER BY year, month;
 
 
 
