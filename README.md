@@ -49,9 +49,8 @@ Synthetic data (5,000+ users and large-scale interactions) was generated using P
 12. Which hashtags drive the highest average likes per post?  
 13. Which users use hashtags most frequently?  
 14. Who are the top 10 most followed users?  
-15. Which users follow many accounts but have very few followers (potential spam behavior)?  
-16. Which users have zero posts, zero followers, and zero likes received?  
-17. Which newly created users show unusually high activity?  
+15. Which users follow many accounts?  
+16. Which users have zero posts, zero followers, and zero likes received?    
 
 ---
 
